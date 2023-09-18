@@ -30,6 +30,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -41,4 +46,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation "com.github.skydoves:powerspinner:1.2.6" //스피너
+
+    implementation 'com.google.code.gson:gson:2.10.1'//Serialized 어노테이션
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // Gson을 사용하여 JSON 직렬화/역직렬화를 원하는 경우에 추가
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0' // Retrofit에 필요한 OkHttp 지원을 위해 추가
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'//OkHttp 통신 로그 확인하기위함
 }
